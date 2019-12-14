@@ -10,6 +10,7 @@
 name: K2云编译
 
 on: 
+  public
 #  release:
 #    types: [published]
 #  push:
