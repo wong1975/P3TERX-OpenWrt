@@ -43,17 +43,10 @@ jobs:
       env:
         DIY_SH: 'cs.sh'
       run: |
-        sudo mkdir openwrt 
-	sudo mv cs.sh openwrt/cs.sh
-        sudo cd openwrt
-	sudo mkdir bin
-	sudo mv cs.sh bin/cs.sh
-	sudo cd bin
-	sudo chmod +x cs.sh
-        ./$DIY_SH
-	cd ../
-        cd ../
-    - name: 上载bin目录
+        sudo mkdir openwrt
+	sudo mv $DIY_SH openwrt/$DIY_SH
+
+- name: 上载bin目录
       uses: actions/upload-artifact@master
       if: always()
       with:
