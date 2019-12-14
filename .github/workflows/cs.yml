@@ -41,11 +41,11 @@ jobs:
         sudo -E apt-get -qq clean
         curl -fsSL https://raw.githubusercontent.com/g0g001/dotfiles/master/.bashrc >> ~/.bashrc
         sudo ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-    - name: 克隆源代码
-      env: 
-        REPO_URL: https://github.com/g0g001/lede
-        REPO_BRANCH: master
-      run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
+#    - name: 克隆源代码
+#      env: 
+#        REPO_URL: https://github.com/g0g001/lede
+#        REPO_BRANCH: master
+#      run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
 
 #    - name: 下载软件更新
 #      run: cd openwrt && ./scripts/feeds update -a
@@ -65,40 +65,13 @@ jobs:
         ./cs.sh
         sudo cd ../
         sudo cd ../
+
 #    - name: SSH connection to Actions
 #      uses: P3TERX/debugger-action@master
 
-    - name: 下载包
-      run: |
-        cd openwrt && make download -j8
-        find dl -size -1024c -exec ls -l {} \;
-        find dl -size -1024c -exec rm -f {} \;
-    - name: 多线程编译
-      run: |
-        cd openwrt
-        echo -e "$(nproc) thread compile"
-        make -j$(nproc)
-    - name: 单线程编译
-      if: failure()
-      run: |
-        cd openwrt
-        make -j1 V=s
-#    - name: 上载bin目录
-#      uses: actions/upload-artifact@master
-#      if: always()
-#      with:
-#        name: OpenWrt_bin
-#        path: openwrt/bin
-
-    - name: 整理档案
-      if: always()
-      run: |
-        cd openwrt/bin/targets/*/*
-        rm -rf packages
-        echo "::set-env name=FIRMWARE::$(pwd)"
-    - name: 上载固件
+    - name: 上载bin目录
       uses: actions/upload-artifact@master
       if: always()
       with:
-        name: OpenWrt_firmware
-        path: ${{ env.FIRMWARE }}
+        name: OpenWrt_bin
+        path: openwrt/bin
