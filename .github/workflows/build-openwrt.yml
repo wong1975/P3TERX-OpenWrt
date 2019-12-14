@@ -10,13 +10,13 @@
 name: K2云编译
 
 on: 
-  release:
-    types: [published]
-  push:
-    branches: 
-      - master
-    paths:
-      - '.config'
+#  release:
+#    types: [published]
+#  push:
+#    branches: 
+#      - master
+#    paths:
+#      - '.config'
 #  schedule:
 #    - cron: 0 8 * * 5
 #  watch:
