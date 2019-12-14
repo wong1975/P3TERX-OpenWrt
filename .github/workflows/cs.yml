@@ -43,13 +43,13 @@ jobs:
       env:
         DIY_SH: 'cs.sh'
       run: |
-        mkdir openwrt 
-	mv $DIY_SH openwrt/cs.sh
-        cd openwrt
-	mkdir bin
-	mv $DIY_SH bin/cs.sh
-	cd bin
-	chmod +x $DIY_SH
+        sudo mkdir openwrt 
+	sudo mv $DIY_SH openwrt/cs.sh
+        sudo cd openwrt
+	sudo mkdir bin
+	sudo mv $DIY_SH bin/cs.sh
+	sudo cd bin
+	sudo chmod +x $DIY_SH
         ./$DIY_SH
 	cd ../
         cd ../
