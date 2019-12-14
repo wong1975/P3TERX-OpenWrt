@@ -44,12 +44,12 @@ jobs:
         DIY_SH: 'cs.sh'
       run: |
         sudo mkdir openwrt 
-	sudo mv $DIY_SH openwrt/cs.sh
+	sudo mv cs.sh openwrt/cs.sh
         sudo cd openwrt
 	sudo mkdir bin
-	sudo mv $DIY_SH bin/cs.sh
+	sudo mv cs.sh bin/cs.sh
 	sudo cd bin
-	sudo chmod +x $DIY_SH
+	sudo chmod +x cs.sh
         ./$DIY_SH
 	cd ../
         cd ../
