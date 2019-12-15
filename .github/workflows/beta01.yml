@@ -55,7 +55,7 @@ jobs:
 
     - name: 加载自定义配置
       env:
-        CONFIG_FILE: 'beta01'
+        CONFIG_FILE: 'beta01.config'
         DIY_SH: 'diy.sh'
       run: |
         [ -e files ] && mv files openwrt/files
