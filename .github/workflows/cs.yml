@@ -66,8 +66,8 @@ jobs:
         mv 00.txt bin/00.txt
         cd ../
 
-#    - name: SSH connection to Actions
-#      uses: P3TERX/debugger-action@master
+    - name: SSH connection to Actions
+      uses: P3TERX/debugger-action@master
 
     - name: 上载bin目录
       uses: actions/upload-artifact@master
