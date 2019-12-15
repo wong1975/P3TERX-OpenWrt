@@ -2,7 +2,7 @@
 #不更新源码杜绝出错版
 #=================================================
 
-name: 测试编译:IPv6，IP/MAC绑定，计划重启，DDNS，防火墙，网络加速，访客WIFI，内存释放，ssrP全部,UPnP，WIFI计划，网络唤醒
+name: ######测试03编译:netdata实时监控，IPv6，argon主题，adbyby，IP/MAC绑定，计划重启，DDNS，防火墙，网络加速，访客WIFI，内存释放，ssrP，ssrS，UPnP，WIFI计划，网络唤醒
 
 on: 
   release:
