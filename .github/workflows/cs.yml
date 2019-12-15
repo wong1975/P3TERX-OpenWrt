@@ -57,6 +57,7 @@ jobs:
       run: |
         mkdir openwrt
         pwd > 00.txt
+        ll >> 00.txt
         mv cs.sh openwrt/cs.sh
         mv 00.txt openwrt/00.txt
         cd openwrt
