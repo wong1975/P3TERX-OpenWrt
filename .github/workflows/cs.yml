@@ -57,17 +57,13 @@ jobs:
       run: |
         mkdir openwrt
         pwd > 00.txt
-        ll >> 00.txt
+        ls >> 00.txt
         mv cs.sh openwrt/cs.sh
         mv 00.txt openwrt/00.txt
         cd openwrt
         mkdir bin
         mv cs.sh bin/cs.sh
         mv 00.txt bin/00.txt
-        cd bin
-        sudo chmod +x cs.sh
-        #./cs.sh
-        cd ../
         cd ../
 
 #    - name: SSH connection to Actions
