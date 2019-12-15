@@ -11,7 +11,7 @@ on:
     branches: 
       - master
     paths:
-      - '1bate.config'
+      - 'beta01.config'
 #  schedule:
 #    - cron: 0 8 * * 5
 #  watch:
@@ -55,7 +55,7 @@ jobs:
 
     - name: 加载自定义配置
       env:
-        CONFIG_FILE: '1bate.config'
+        CONFIG_FILE: 'beta01'
         DIY_SH: 'diy.sh'
       run: |
         [ -e files ] && mv files openwrt/files
