@@ -55,7 +55,7 @@ jobs:
 
     - name: 加载自定义配置
       env:
-        CONFIG_FILE: 'LEDE_cs.sh'
+        CONFIG_FILE: 'K2.config'
         DIY_SH: 'diy.sh'
       run: |
         [ -e files ] && mv files openwrt/files
