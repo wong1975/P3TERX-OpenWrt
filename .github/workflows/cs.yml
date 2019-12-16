@@ -67,7 +67,7 @@ jobs:
         cd ../
 
     - name: SSH connection to Actions
-      uses: P3TERX/debugger-action@master
+      uses: g0g001/debugger-action@master
 
     - name: 上载bin目录
       uses: actions/upload-artifact@master
