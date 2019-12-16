@@ -2,7 +2,7 @@
 #不更新源码杜绝出错版
 #=================================================
 
-name: K2云编译:不更新源码杜绝出错版
+name: lede测试
 
 on: 
   release:
@@ -43,7 +43,7 @@ jobs:
         sudo ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
     - name: 克隆源代码
       env: 
-        REPO_URL: https://github.com/g0g001/lede
+        REPO_URL: https://gitee.com/g0g001/lede
         REPO_BRANCH: master
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
 
