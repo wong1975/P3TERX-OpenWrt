@@ -39,11 +39,11 @@ jobs:
         sudo -E apt-get -qq install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler
         sudo -E apt-get -qq autoremove --purge
         sudo -E apt-get -qq clean
-        curl -fsSL https://raw.githubusercontent.com/g0g001/dotfiles/master/.bashrc >> ~/.bashrc
+        curl -fsSL https://raw.githubusercontent.com/LEDE-Actions/dotfiles/master/.bashrc >> ~/.bashrc
         sudo ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
     - name: 克隆源代码
       env: 
-        REPO_URL: https://github.com/g0g001/lede
+        REPO_URL: https://github.com/LEDE-Actions/lede
         REPO_BRANCH: master
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
 
@@ -65,7 +65,7 @@ jobs:
         ../$DIY_SH
         make defconfig
 #    - name: SSH connection to Actions
-#      uses: P3TERX/debugger-action@master
+#      uses: LEDE-Actions/debugger-action@master
 
     - name: 下载包
       run: |
