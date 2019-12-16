@@ -24,11 +24,6 @@ jobs:
     steps:
     - name: 查看
       uses: actions/checkout@master
-
-    - name: 初始化环境
-      env:
-        DEBIAN_FRONTEND: noninteractive
-     
 #    - name: 克隆源代码
 #      env: 
 #        REPO_URL: https://github.com/g0g001/lede
