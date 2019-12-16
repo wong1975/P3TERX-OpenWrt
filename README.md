@@ -8,9 +8,9 @@ LEDE-Actions项目集合了编译路由器固件相关的代码项目。代码�
 
 Actions-OpenWrt内增加了K2的配置编译文件，
 
-beta.config ：固件为默认功能，重新保存后。会启动2个编译程序，生成2款固件。一款代码为LEDE-Actions/lede（代码不更新版），另一款代码为coolsnowwolf/lede大神同步更新源码。（每周自动用最新源码编译一次固件）
+beta.config ：固件为默认功能，重新保存后。会启动2个编译程序，生成2款固件。一款代码为LEDE-Actions/lede（代码不更新版），另一款代码为coolsnowwolf/lede大神同步更新源码。（每周四自动用最新源码编译一次固件）
 
-K2.config ：同上生成2款固件（每周自动用最新源码编译一次固件）。功能如下:界面主题argon，IPv6，adbyby-plus去广告，IP/MAC绑定，计划重启，DDNS，防火墙，网络加速，访客WIFI，内存释放，ShadowSocksR Plus+ ，ShadowSocksR服务端，UPnP，WIFI计划，网络唤醒。
+K2.config ：同上生成2款固件（每月1号自动用最新源码编译一次固件）。功能如下:界面主题argon，IPv6，adbyby-plus去广告，IP/MAC绑定，计划重启，DDNS，防火墙，网络加速，访客WIFI，内存释放，ShadowSocksR Plus+ ，ShadowSocksR服务端，UPnP，WIFI计划，网络唤醒。
 ###（VPN用SSR替代，内网穿透太多种了，没集成需要装就是了（ROM剩余860KB）,去掉了不实用的FTP、打印机之类的无用功能。）###
 
 
