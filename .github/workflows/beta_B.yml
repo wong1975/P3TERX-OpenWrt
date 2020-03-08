@@ -12,8 +12,8 @@ on:
       - master
     paths:
       - 'beta.config'
-  schedule:
-    - cron: 30 21 * * 4
+#  schedule:
+#    - cron: 30 21 * * 4
 #  watch:
 #    types: [started]
 
