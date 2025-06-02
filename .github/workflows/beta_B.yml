@@ -2,7 +2,7 @@
 #新源码测试版
 #=================================================
 
-name: 编译K2:LEDE默认配置（新源码测试版）
+name: 编译xiaomi_ax3600:LEDE默认配置（新源码测试版）
 
 on: 
   release:
@@ -14,8 +14,10 @@ on:
       - 'beta.config'
 #  schedule:
 #    - cron: 30 21 * * 4
-#  watch:
-#    types: [started]
+  watch:
+    types: [started]
+  workflow_dispatch:
+
 
 jobs:
   build:
